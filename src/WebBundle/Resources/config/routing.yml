@@ -1,0 +1,15 @@
+user_list:
+    path:     /admin/users
+    defaults: { _controller: WebBundle:User:list }
+
+user_edit:
+    path:     /admin/user/{id}/edit
+    defaults: { _controller: WebBundle:User:edit }
+
+user_delete:
+    path:     /admin/user/{id}/delete
+    defaults: { _controller: WebBundle:User:delete }
+
+user_new:
+    path:     /admin/user/new
+    defaults: { _controller: WebBundle:User:new }

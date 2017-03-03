@@ -1,0 +1,31 @@
+{% extends ':templates:base.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+  {{ include(':templates:_menu_top.html.twig') }}
+
+  <a href="{{ path('user_new') }}"><button type="button" class="btn btn-success">Create</button></a>
+
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+      <tr>
+        <td>{{ user.email }}</td>
+        <td>
+          <a href="{{ path('user_edit', { 'id': user.id}) }}"><button type="button" class="btn btn-default">Edit</button></a>
+          <a href="{{ path('user_delete', { 'id': user.id}) }}"><button type="button" class="btn btn-danger">Delete</button></a>
+          <a href="{{ path('user_homepage', { '_switch_user': user.email}) }}"><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-eye-open"></span></button></a>
+        </td>
+      </tr>
+    {%  endfor %}
+    </tbody>
+  </table>
+{% endblock %}

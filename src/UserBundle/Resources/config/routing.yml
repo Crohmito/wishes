@@ -1,0 +1,15 @@
+user_homepage:
+    path:     /
+    defaults: { _controller: UserBundle:Default:index }
+
+user_register:
+    path:     register
+    defaults: { _controller: WebBundle:User:register }
+
+security_login:
+    path: login
+    defaults: { _controller: UserBundle:Security:login}
+
+security_logout:
+    path: logout
+    defaults: { _controller: UserBundle:Security:logout}

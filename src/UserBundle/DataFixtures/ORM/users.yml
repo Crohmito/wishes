@@ -1,0 +1,10 @@
+UserBundle\Entity\User:
+    user_{1..10}:
+      email: <email()>
+      plainPassword: test
+      roles: ['ROLE_USER']
+
+    user_admin:
+      email: "admin@wishes.ch"
+      plainPassword: admin
+      roles: ['ROLE_ADMIN']

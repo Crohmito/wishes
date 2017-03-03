@@ -1,0 +1,18 @@
+{% extends ':templates:base.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+  {{ include(':templates:_menu_top.html.twig') }}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>New Genus</h1>
+        {{ form_start(userForm) }}
+        {{ form_widget(userForm) }}
+        <button type="submit" class="btn btn-primary">Save</button>
+        {{ form_end(userForm) }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
