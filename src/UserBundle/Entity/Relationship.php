@@ -2,6 +2,13 @@
 
 namespace UserBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="relationship")
+ */
+
 class Relationship
 {
     const STATUS_PENDING = 'pending';
@@ -28,10 +35,10 @@ class Relationship
     private $user_two;
 
     /**
-     * @ORM\
+     * @ORM\Column(type="string")
      */
 
-    private $status;
+    private $status = self::STATUS_PENDING;
 
     /**
      * @return mixed
